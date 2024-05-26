@@ -9,30 +9,18 @@
         android:id="@+id/startFragment"
         android:name="com.example.nnafff.StartFragment"
         android:label="fragment_start"
-        tools:layout="@layout/fragment_start" >
-        <action
-            android:id="@+id/action_startFragment_to_zweiFragment"
-            app:destination="@id/zweiFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_start" />
     <fragment
         android:id="@+id/zweiFragment"
         android:name="com.example.nnafff.ZweiteFragment"
         android:label="fragment_zwei"
-        tools:layout="@layout/fragment_zwei" >
-        <action
-            android:id="@+id/action_zweiFragment_to_dritteFragment"
-            app:destination="@id/dritteFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_zwei" />
     <fragment
         android:id="@+id/dritteFragment"
         android:name="com.example.nnafff.DreitteFragment"
         android:label="fragment_drei"
         tools:layout="@layout/fragment_drei"
-        >
-        <action
-            android:id="@+id/action_dritteFragment_to_zweiFragment2"
-            app:destination="@id/zweiFragment" />
-    </fragment>
+        />
 
 
 

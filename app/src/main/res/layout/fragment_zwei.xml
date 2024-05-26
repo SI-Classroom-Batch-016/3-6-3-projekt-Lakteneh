@@ -8,6 +8,7 @@
     android:background="#9B1EE9">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rV"
         tools:listitem="@layout/item_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
