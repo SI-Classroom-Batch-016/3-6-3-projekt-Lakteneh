@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.nnafff.databinding.FragmentDreiBinding
 import com.example.nnafff.databinding.FragmentStartBinding
 
@@ -21,8 +22,7 @@ class DreitteFragment : Fragment() {
 
         binding =  FragmentDreiBinding.inflate(layoutInflater)
 
-        return inflater.inflate(R.layout.fragment_drei, container, false)
-
+        return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -30,17 +30,13 @@ class DreitteFragment : Fragment() {
         val index = bundle?.getInt("index") ?: 0
 
         val autoList = viewModel.cars.value?: emptyList()
-        val dasAuto = autoList.get(index)
-        binding.imageView3.setImageResource(dasAuto.foto)
+        if (autoList.size>0){
+            val dasAuto = autoList.get(index)
+            binding.imageView3.setImageResource(dasAuto.foto)
 
+            binding.back4.setOnClickListener { findNavController().navigateUp() }
 
-
-
-
+        }
     }
-
-
-
-
 
 }

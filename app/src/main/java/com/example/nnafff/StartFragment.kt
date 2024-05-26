@@ -10,30 +10,29 @@ import com.example.nnafff.databinding.FragmentStartBinding
 
 class StartFragment : Fragment() {
 
-        private lateinit var binding:FragmentStartBinding
+    private lateinit var binding: FragmentStartBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        binding =  FragmentStartBinding.inflate(layoutInflater)
+        binding = FragmentStartBinding.inflate(layoutInflater)
 
-        return inflater.inflate(R.layout.fragment_start, container, false)
+        return binding.root
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.button.setOnClickListener{
+        binding.button.setOnClickListener {
 
             findNavController().navigate(R.id.zweiFragment)
-            
+
         }
     }
-
-
-
-
 }
+
+
+

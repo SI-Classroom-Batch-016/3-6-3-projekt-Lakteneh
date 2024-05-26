@@ -41,7 +41,7 @@ class Adapter ( val dataset : List <Auto > )
 
             val bundle = Bundle()
             bundle.putInt("index", position)
-            navController.navigate(R.id.drei_fragment,bundle)
+            navController.navigate(R.id.dritteFragment,bundle)
 
         }
 
@@ -50,12 +50,3 @@ class Adapter ( val dataset : List <Auto > )
 
 
 }
-
-/*
-
-
-): RecyclerView.Adapter <Adapter.ItemViewHolder>() {
-
-
-    inner class ItemViewHolder (binding: ItemListBinding):ViewHolder(binding.root)
-*/
